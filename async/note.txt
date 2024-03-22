@@ -1,0 +1,23 @@
+WORKFLOW:
+Task: Getting a list of users from an api end point and store in the redux store
+
+STATE of the app:
+1. We need a loading state
+2. We need to get the data itself which initiallly would be an empty state
+3. Error state
+
+ACTIONS:
+1. FETCH_USERS_REQUEST - Fetch list of users
+2. FETCH_USERS_SUCCESS - Fetched successfully
+1. FETCH_USERS_FAILURE - Error fetching data
+
+REDUCERS:
+case FETCH_USERS_REQUEST
+    loading: true as data is till been loaded
+
+case FETCH_USERS_SUCCESS
+    loading: false
+    users: data gotten from api
+case FETCH_USERS_FAILURE
+    loading: false
+    error: error( from API )
